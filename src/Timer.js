@@ -36,12 +36,12 @@ class Timer extends PureComponent {
   }
 
   render() {
-    const { time, color, logText } = this.state;
+    const { time, color } = this.state;
+    //console.log(logText);
     return (
       <section className="Timer" style={{ background: color }} ref={this.timer}>
         <h1>{time}</h1>
         <button onClick={this.stopClock}>Stop</button>
-        <aside className="logText">{logText}</aside>
         <small onClick={this.handleClose}>X</small>
       </section>
     );
